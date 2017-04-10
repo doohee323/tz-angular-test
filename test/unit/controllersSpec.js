@@ -1,13 +1,10 @@
 'use strict';
 
-/* 컨트롤러 단위 테스트 */
-
 describe('controllers unit test', function() {
-  beforeEach(module('SodaTransferUI'));
+  beforeEach(module('tz-ui'));
 
   var scope;
   it('View1Ctrl test1 value', inject(function($rootScope, $controller) {
-    debugger;
     scope = $rootScope.$new();
     var ctrl = $controller('View1Ctrl', {
       $scope : scope

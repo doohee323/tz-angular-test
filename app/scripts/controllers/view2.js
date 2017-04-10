@@ -1,13 +1,11 @@
 'use strict';
 
 /**
- * @ngdoc function
- * @name SodaTransferUI.controller:HomeCtrl
- * @description # Controller of the SodaTransferUI
  */
-angular.module('SodaTransferUI').controller('View2Ctrl',
-    [ '$scope', function($scope) {
+angular.module('tz-ui').controller('View2Ctrl',
+    [ '$scope', 'Version', function($scope, Version) {
 
-      $scope.test1 = 'View1';
-      
+      $scope.test1 = 'View2';
+      $scope.version = Version.getVersion($scope);
+
     } ]);

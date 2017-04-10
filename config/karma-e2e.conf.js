@@ -1,35 +1,18 @@
-module.exports = function (karma) {
-	'use strict';
+'use strict';
 
-	karma.set({
-		frameworks: ['ng-scenario'],
+exports.config = {
+  basePath: '../',
+    
+  specs : [ 
+     'test/e2e/**/*.js'
+  ],
 
-		files: [
-			'test/e2e/**/*.js'
-		],
+  // 실제 테스트에 사용될 브라우저. multiCapabilities라는 키값으로 여러개의 브라우저를 지정할 수도 있다.
+  capabilities : {
+    'browserName' : 'chrome'
+  },
 
-		basePath: '../',
-
-		exclude: [],
-
-		reporters: ['progress'],
-
-		port: 8000,
-
-		runnerPort: 9100,
-
-		colors: true,
-
-		autoWatch: true,
-
-		browsers: ['Chrome'],
-
-		singleRun: true,
-
-		urlRoot: '/_karma_/',
-
-	    proxies: {
-	      '/': 'http://localhost:8000/'
-	    }
-	});
+  baseUrl : 'http://localhost:8000/',
+  framework : 'jasmine'
 };
+

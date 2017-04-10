@@ -1,11 +1,8 @@
 'use strict';
 
 /**
- * @ngdoc function
- * @name SodaTransferUI.controller:HomeCtrl
- * @description # Controller of the SodaTransferUI
  */
-angular.module('SodaTransferUI').controller('HomeCtrl',
+angular.module('tz-ui').controller('HomeCtrl',
     [ '$scope', function($scope) {
 
     } ]);

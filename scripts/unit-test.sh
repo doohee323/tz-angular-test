@@ -1,1 +1,1 @@
-karma start ../config/karma.conf.js %*
+karma start ../config/karma.conf.js *

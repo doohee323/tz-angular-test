@@ -1,15 +1,17 @@
 'use strict';
 
-// 서비스 단위 테스트
+describe('Service unit test', function() {
+  beforeEach(module('tz-ui'));
 
-describe('서비스 단위 테스트', function() {
-	beforeEach(module('SodaTransferUI'));
+  describe('Version service test1', function() {
+    it('get version service value', inject([ '$rootScope', 'Version',
+        function($rootScope, Version) {
+          var scope = $rootScope.$new();
+          scope.test1 = 'View1';
+          expect(Version.getVersion(scope)).toEqual('0.1');
+          scope.test1 = 'View2';
+          expect(Version.getVersion(scope)).toEqual('0.2');
+        } ]));
 
-	describe('버전 서비스 테스트', function() {
-	  debugger;
-		it('현재 버전 반환', inject(function(version) {
-			expect(version).toEqual('0.1');
-		}));
-	});
+  });
 });
-
